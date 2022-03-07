@@ -8,7 +8,7 @@ E-Commerce Backend Project Due : 6 MAR 2022
 Video is also in Files
 
 ## Screenshot Below :
-![alt text](/ScreenShot.png)
+![alt text](./ScreenShot.png)
 ---
 
 ## Grading Criteria :
