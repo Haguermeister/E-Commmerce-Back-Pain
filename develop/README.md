@@ -2,7 +2,7 @@
 
 E-Commerce Backend Project Due : 6 MAR 2022
 
-## Github Repo Link : 
+## Github Repo Link : https://github.com/Haguermeister/E-Commmerce-Back-Pain
 
 ## Video Link : https://drive.google.com/file/d/1Dm2ck5MAd_NWJDRGVKJBCl6_0FXQKFQP/view
 Video is also in Files
