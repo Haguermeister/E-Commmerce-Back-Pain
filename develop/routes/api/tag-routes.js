@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     // find all tags
     // be sure to include its associated Product data
     Tag.findAll({
-        attributes: { include: Product }
+        include: Product
     }).then(dbTagsData => res.json(dbTagsData))
         .catch(err => {
             console.log(err);
@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
     // be sure to include its associated Product data
     Tag.findOne({
         where: { id: req.params.id },
-        attributes: { include: Product }
+        include: Product
     }).then(dbTagData => {
         if (!dbTagData) {
             res.status(404).json({ message: 'There is not tag with this id.' });
@@ -52,9 +52,12 @@ router.put('/:id', (req, res) => {
         }
     }).then(dbTagData => {
         if (!dbTagData) {
-
+            res.status(400).json({ message: 'No catergory with that id.' });
+            return;
         }
+        res.json(dbTagData);
     })
+
 });
 
 router.delete('/:id', (req, res) => {

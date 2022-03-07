@@ -8,9 +8,7 @@ router.get('/', (req, res) => {
     // find all products
     // be sure to include its associated Category and Tag data
     Product.findAll({
-        attributes: {
-            include: [Category, Tag]
-        }
+        include: [Category, Tag]
     }).then(dbProductsData => res.json(dbProductsData))
         .catch(err => {
             console.log(err);
@@ -26,9 +24,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: {
-            include: [Category, Tag]
-        }
+        include: [Category, Tag]
     }).then(dbProductData => {
         if (!dbProductData) {
             res.status(404).json({ message: 'There is no product with this id.' });
